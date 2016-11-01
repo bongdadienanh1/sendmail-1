@@ -1,6 +1,5 @@
 # seedmail
 简单的发送邮件
-package com.limin.test.portal.basic.utils.mail;
 
 import java.util.Properties;
 
@@ -111,41 +110,18 @@ public class SimpleMailSender {
 	    
 	    public static void main(String[] args) {
 			
-			String content = "";
-			Runtime runtime = Runtime.getRuntime();
-
-			MailSenderInfo mailSenderInfo = new MailSenderInfo();
-//			mailSenderInfo.setMailServerHost("smtp.163.com");
-			mailSenderInfo.setMailServerHost("smtp.exmail.qq.com");
+			mailSenderInfo.setMailServerHost("smtp.163.com");
 			mailSenderInfo.setMailServerPort("465");
-//			mailSenderInfo.setMailSocketFactoryPort("465");
-//			mailSenderInfo.setFromAddress("huanqiu_123456@163.com");
-			mailSenderInfo.setFromAddress("limin.zheng@algoblu.com");
-//			mailSenderInfo.setToAddress("1922289648@qq.com");
+			mailSenderInfo.setFromAddress("**@**.com");
 			//String[] address = new String[]{"huanqiu_123456@163.com"};
-			mailSenderInfo.setToAddress("zlm488@163.com");
-//			mailSenderInfo.setUserName("huanqiu_123456@163.com");
-			mailSenderInfo.setUserName("limin.zheng@algoblu.com");
-//			mailSenderInfo.setPassword("123456a");
-			mailSenderInfo.setPassword("algoblu123");
-			/*mailSenderInfo.setToAddress("apply@algoblu.com");
-			mailSenderInfo.setUserName("apply@algoblu.com");
-			mailSenderInfo.setPassword("algoblu123");*/
+			mailSenderInfo.setToAddress("**@163.com");
+			mailSenderInfo.setUserName("***@**.com");
+			mailSenderInfo.setPassword("*****3");
+			mailSenderInfo.setUserName("");
+			mailSenderInfo.setPassword("");*/
 			mailSenderInfo.setValidate(true);
 			mailSenderInfo.setSubject("测试邮件口"+runtime);
 			mailSenderInfo.setContent(content+runtime);
-			
-			/*for (int i = 0; i < 10; i++) {
-				System.out.println("第"+i);
-				sendHtmlMail(mailSenderInfo);// 发送html格式
-				try {
-					TimeUnit.SECONDS.sleep(600);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}*/
-			
 			sendHtmlMail(mailSenderInfo);// 发送html格式
 			
 		}
